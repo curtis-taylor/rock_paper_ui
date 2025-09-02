@@ -1,0 +1,47 @@
+<html>
+    <title> ROCK PAPER SCISSOR </title>
+    <body>
+        
+        <button id="rock">ROCK</button>
+        <button id="paper">PAPER</button>
+        <button id="scissors">SCISSORS</button>
+        <div id="choice">
+            <div id="human"></div>
+            <div id="comp"></div>
+        </div>
+
+        <script type="text/javascript" src="index.js"></script>
+        
+        <script>
+        const rock_button = document.querySelector('#rock');
+        const paper_button = document.querySelector('#paper');
+        const scissors_button = document.querySelector('#scissors')
+
+
+        rock_button.addEventListener("click", function(e) {
+            e.preventDefault();
+            //e.stopPropagation();
+            e.stopImmediatePropagation();
+            console.log("roc")
+            playRound("rock", getComputerChoice());
+        });
+
+        paper_button.addEventListener("click", function(e) {
+            e.preventDefault();
+            //e.stopPropagation();
+            e.stopImmediatePropagation();
+            console.log("pap")
+            playRound("paper", getComputerChoice());
+        });
+
+        scissors_button.addEventListener("click", function(e) {
+            e.preventDefault();
+            //e.stopPropagation();
+            e.stopImmediatePropagation();
+            console.log("sci")
+            playRound("scissors", getComputerChoice());
+        });
+        
+        </script>
+    </body>
+</html>
