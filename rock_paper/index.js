@@ -39,15 +39,18 @@ function playRound(humanChoice, computerChoice) {
     if(humanChoice == weakness_dict[computerChoice]) {
         humanScore++;
         console.log("You win, " + humanChoice[0].toUpperCase() + humanChoice.slice(1) + " beats " + computerChoice[0].toUpperCase() + computerChoice.slice(1));
-        // human_view.
+        human_content.textContent = "You win, " + humanChoice[0].toUpperCase() + humanChoice.slice(1) + " beats " + computerChoice[0].toUpperCase() + computerChoice.slice(1);
+        human_view.append(human_content)
 
     } else if(computerChoice == weakness_dict[humanChoice]) {
         computerScore++;
         console.log("You lose, " + computerChoice[0].toUpperCase() + computerChoice.slice(1) + " beats " + humanChoice[0].toUpperCase() + humanChoice.slice(1));
+        human_content.textContent = "You lose, " + computerChoice[0].toUpperCase() + computerChoice.slice(1) + " beats " + humanChoice[0].toUpperCase() + humanChoice.slice(1);
+        human_view.append(human_content)
 
 
     } else {
-        
+        console.log("Tie");
     }
 
 }
